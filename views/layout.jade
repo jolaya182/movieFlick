@@ -1,0 +1,25 @@
+doctype html
+html.locale-en-US.js.no-touch.cssanimations.csstransforms.csstransforms3d.csstransitions
+  head
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title= title
+    link(rel='icon', href='/images/fibonacci-btn.ico')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    .wrap
+      #main.main-content.position-relaive
+        block content
+    footer
+      .content
+        .grid-1-at-medium
+          .column
+            h3.detail-text
+              |  Fibonacci Flicks
+            h3.detail-text
+              |  Created by: 
+              span
+                a.mini-link(href='https://github.com/jolaya182', target='_blank') Javier Olaya, 
+              span
+                a.mini-link(href='https://moecodes.herokuapp.com/', target='_blank') Modou Sawo
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js')
+    script(typpe='text/javascripts',src='/javascripts/scripts.js')

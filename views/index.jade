@@ -1,0 +1,40 @@
+extends layout
+
+block content
+  section.search-block.position-relaive
+    .content.medium-padding
+      .content-md-width
+        h1.subheadline.white.align-center
+          |  Search Movies & Shows
+        form#searchForm.search.position-relaive(accept-charset='UTF-8', action='', method='', role='search')
+          input#searchTitle.search-curtain.query(name='query', placeholder='Find movies and Shows (e.g Silicon Valley)', type='search' autocomplete='off')
+          input(name='commit', type='submit', value='Search')
+          //button.gap-top-small Search
+        .famous-search.gap-top-small.white
+          strong.white
+            |  Popular Searches:
+          a.topic-links(href='/some_movie')
+            | Wicked Tuna
+          | ,
+          a.topic-links(href='/some_movie')
+            | Riddick
+          | ,
+          a.topic-links(href='/some_movie')
+            | The Matrix
+
+  section.show-results.position-relaive.bottom-border
+    .content.medium-padding
+      #result.grid-3-at-large.grid-2-at-medium.grid-row-equal-heights
+
+  section.show-previous
+    .content.medium-padding
+      .align-left
+        form.content-md-width.auto-margin-off
+          select#sort
+            option(value='default', selected='') Search Order
+            option(value='title') Title
+            option(value='rating') Rating
+        #previousResults.grid-3-at-large.grid-row-equal-heights
+      
+      // Note to Javi - when I tried having 3 grids like in our demo
+      // the sorting gets a little off for the last item when sorting by rating
